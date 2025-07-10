@@ -1,100 +1,63 @@
 collections_config:
   pages:
-    output: true
+    path: 'content'
     icon: notes
     _enabled_editors:
       - visual
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
     schemas:
       default:
         path: schemas/page.md
         reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
         remove_extra_inputs: true
         icon: notes
   blog:
-    output: true
+    path: 'content/blog'
     icon: edit_calendar
-    _editables: {}
-    _inputs: {}
-    _select_data: {}
-    _structures: {}
     add_options:
       - name: Add A New Blog Post
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
     schemas:
       default:
         path: schemas/blog.md
         reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
         remove_extra_inputs: true
         icon: notes
   careers:
-    output: true
+    path: 'content/careers'
     icon: cases
-    _editables: {}
-    _inputs: {}
-    _select_data: {}
-    _structures: {}
     add_options:
       - name: Add New Job Post
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
     schemas:
       default:
         path: schemas/careers.md
         reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
         remove_extra_inputs: true
         icon: group_add
   about:
-    output: true
+    path: 'content/about'
     icon: person
-    _editables: {}
-    _inputs: {}
-    _select_data: {}
-    _structures: {}
     add_options:
       - name: Add New Team Member
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
     schemas:
       default:
         path: schemas/staff.md
         reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
         remove_extra_inputs: true
         icon: person_add
   services:
-    output: true
+    path: 'content/services'
     icon: construction
-    _editables: {}
-    _inputs: {}
-    _select_data: {}
-    _structures: {}
     add_options:
       - name: Add New Service
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
     schemas:
       default:
         path: schemas/service.md
         reorder_inputs: true
-        hide_extra_inputs: false
-        remove_empty_inputs: false
         remove_extra_inputs: true
         icon: construction
+  data:
+    path: data
+    icon: data
+    disable_url: true
 _inputs:
   menu:
     type: auto
@@ -115,7 +78,6 @@ _inputs:
   featured_image:
     type: image
     options:
-      correct_orientation: true
       resize_style: contain
     comment: >-
       Set your featured image. Featured images are used as your SEO preview
@@ -127,7 +89,6 @@ _inputs:
     options:
       accepts_mime_types:
         - image/jpeg
-      correct_orientation: true
     comment: This is the main image used at the top of every page.
     cascade: true
   image_url:
@@ -135,7 +96,6 @@ _inputs:
     options:
       accepts_mime_types:
         - image/jpeg
-      correct_orientation: true
     comment: >-
       Upload a .jpg image. Make sure to check the documentation for image
       handling best practices before adding images to the website.
@@ -146,7 +106,6 @@ _inputs:
       accepts_mime_types:
         - image/jpeg
         - image/svg+xml
-      correct_orientation: true
     cascade: true
   icon:
     type: image
@@ -154,7 +113,6 @@ _inputs:
       accepts_mime_types:
         - image/jpeg
         - image/svg+xml
-      correct_orientation: true
     cascade: true
   heading:
     type: text
